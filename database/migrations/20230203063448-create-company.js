@@ -7,7 +7,10 @@ module.exports = {
         allowNull: false,
         // autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.UUID
+        type: Sequelize.STRING
+      },
+      sector: {
+        type: Sequelize.STRING
       },
       name: {
         type: Sequelize.STRING
@@ -43,7 +46,7 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
     });
   },
   async down(queryInterface, Sequelize) {

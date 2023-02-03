@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Company.init({
-    id: DataTypes.UUID,
     name: DataTypes.STRING,
     ceo: DataTypes.STRING,
     tags: DataTypes.ARRAY(DataTypes.STRING),
@@ -23,7 +22,8 @@ module.exports = (sequelize, DataTypes) => {
     mau: DataTypes.DOUBLE,
     roic: DataTypes.DOUBLE,
     score: DataTypes.DOUBLE,
-    description: DataTypes.TEXT
+    description: DataTypes.TEXT,
+    sector: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Company',
